@@ -7,6 +7,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\WebController;
+use App\Http\Controllers\EmployeeController;
 
 Route::get('/', [WebController::class,'index'])->name('index');
 Route::get('/about-us', [WebController::class,'about'])->name('about');
@@ -34,6 +35,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('enquiry',[EnquiryController::class,'index'])->name('enquiry.index');
     Route::get('career',[CareerController::class,'index'])->name('career.index');
     Route::resource('customer',CustomerController::class);
+    Route::resource('employee',EmployeeController::class);
+    Route::get('team', [EmployeeController::class,'privacy'])->name('team');
 });
 
 //Clear all cache
