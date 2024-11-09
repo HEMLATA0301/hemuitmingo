@@ -224,6 +224,21 @@
                             </ul>
                         </li>
                     
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="far fa-check-square"></i>Team</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="{{ route('employee.create')}}">Add Team</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('employee.index') }}">Team List</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="#">Customer List</a>
+                                </li> -->
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>
