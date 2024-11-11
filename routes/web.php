@@ -22,7 +22,7 @@ Route::get('/servicepage', [WebController::class,'servicepage'])->name('servicep
 Route::get('/client', [WebController::class,'client'])->name('client');
 Route::get('/term-us', [WebController::class,'termus'])->name('termus');
 Route::get('/privacy', [WebController::class,'privacy'])->name('privacy');
-
+Route::get('/refund', [WebController::class,'refund'])->name('refund');
 //Authentication
 Route::get('login',[AuthController::class,'login'])->name('login');
 Route::post('login-submit',[AuthController::class,'loginSubmit'])->name('login-submit');
