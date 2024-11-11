@@ -70,6 +70,8 @@
     <link rel="stylesheet" href="{{ asset('alertify/alertify.css') }}"/>
     <link rel="stylesheet" href="{{ asset('alertify/alertify_theme.css') }}"/>
     <script src="{{ asset('alertify/alertify.js') }}"></script>
+    {!! htmlScriptTagJsApi() !!}
+    
 </head>
 
 <body class="home-1">
@@ -189,7 +191,8 @@
 
   <!--  main js file  -->
   <script src="{{ asset('web/js/main.js') }}"></script>
-
+  <script src="{{ asset('web/js/inspect.js')}}"></script>
+  <script src="{{ asset('web/js/validate.js')}}"></script>
 
 </body>
 
