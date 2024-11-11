@@ -36,7 +36,6 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('career',[CareerController::class,'index'])->name('career.index');
     Route::resource('customer',CustomerController::class);
     Route::resource('employee',EmployeeController::class);
-    Route::get('team', [EmployeeController::class,'privacy'])->name('team');
 });
 
 //Clear all cache

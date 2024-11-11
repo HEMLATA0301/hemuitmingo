@@ -19,9 +19,12 @@ class EnquiryController extends Controller
         $request->validate(['name'=>'required|string|max:70',
             'email'=>'nullable|max:70|email',
             'subject'=>'required|string|max:255',
-            'message'=>'required|string']);
+            'message'=>'required|string',
+            'g-recaptcha-response' => 'recaptcha',
+        ]);
+
         try {
-            Enquiry::create($request->all());
+            Enquiry::create($request->except('_token','g-recaptcha-response'));
 
             //Confirmation Notification Mail
             if(!empty($request['email'])){

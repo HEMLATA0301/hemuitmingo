@@ -26,7 +26,7 @@
         What We’re Offering?
       </h1>
       <p class="col-lg-7 col-12" data-aos="fade-up" data-aos-delay="150">
-      At It Mingo Web Development, we provide a comprehensive suite of services 
+      At IT Mingo LLP, we provide a comprehensive suite of services 
        designed to meet all your web development needs. Our offerings are crafted to 
        ensure your business thrives in the digital landscape.
       </p>
@@ -42,7 +42,7 @@
           </div>
           <h5>{{ $product->title }}</h5>
           <p>{{ $product->short_description }}</p>
-          
+          <button>dsd</button>
         </div>
       </div>
       @endforeach

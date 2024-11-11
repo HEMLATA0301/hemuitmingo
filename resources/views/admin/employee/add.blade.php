@@ -28,7 +28,7 @@
                             @isset($employee)
                             <input type="text" id="Name" name="name"   placeholder="Enter Name" value="{{ $employee->name }}" class="form-control" required>
                       @else
-                      <input type="text" id="Name" name="name" value="{{ old('name', 'Default Name') }}">
+                      <input type="text" id="Name" name="name"  placeholder="Enter Name" value="{{ old('name') }}">
                      @endisset
                         
                         </div>
@@ -44,7 +44,7 @@
                             @isset($employee)
                             <input type="text" id="Name" name="position"   placeholder="Enter Name" value="{{ $employee->position }}" class="form-control" required>
                       @else
-                      <input type="text" id="Name" name="name" value="{{ old('name', 'Default Name') }}">
+                      <input type="text" id="position" name="position"  placeholder="Enter Name" value="{{ old('position') }}">
                      @endisset
                         
                         </div>
@@ -59,7 +59,7 @@
                         @isset($employee)
                             <input type="text" id="Name" name="facebook"   placeholder="Enter Name" value="{{ $employee->facebook }}" class="form-control" required>
                       @else
-                      <input type="text" id="Name" name="name" value="{{ old('name', 'Default Name') }}">
+                      <input type="text" id="facebook" name="facebook"  placeholder="Enter Name" value="{{ old('facebook') }}">
                      @endisset
                         </div>
                     </div>
@@ -74,7 +74,7 @@
                             @isset($employee)
                             <input type="text" id="Name" name="instagram"   placeholder="Enter Name" value="{{ $employee->instagram }}" class="form-control" required>
                       @else
-                      <input type="text" id="Name" name="name" value="{{ old('name', 'Default Name') }}">
+                      <input type="text" id="instagram" name="instagram"  placeholder="Enter Name" value="{{ old('instagram') }}">
                      @endisset
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                             @isset($employee)
                             <input type="text" id="twitter" name="twitter"   placeholder="Enter Name" value="{{ $employee->twitter }}" class="form-control" required>
                       @else
-                      <input type="text" id="Name" name="name" value="{{ old('name', 'Default Name') }}">
+                      <input type="text" id="twitter" name="twitter" placeholder="Enter Name" value="{{ old('twitter') }}">
                      @endisset
                         </div>
                     </div>
@@ -104,9 +104,9 @@
                             <!-- <input type="text" id="Linkdin" name="linkedin" value="{{ old('Linkdin') }}"  placeholder="Enter Linkdin" class="form-control" required> -->
 
                             @isset($employee)
-                            <input type="text" id="Name" name="linkedin"   placeholder="Enter Name" value="{{ $employee->linkedin }}" class="form-control" required>
+                            <input type="text" id="Name" name="linkedin"   placeholder="Enter Name linkedin" value="{{ $employee->linkedin }}" class="form-control" required>
                       @else
-                      <input type="text" id="Name" name="linkedin" value="{{ old('linkedin', 'Default Name') }}">
+                      <input type="text" id="linkedin" name="linkedin"  placeholder="Enter Name" value="{{ old('linkedin') }}">
                      @endisset
 
                         </div>

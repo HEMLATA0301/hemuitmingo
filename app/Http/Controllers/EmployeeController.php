@@ -123,6 +123,16 @@ class EmployeeController extends Controller
      */
     public function destroy(Employee $employee)
     {
-        //
+        try {
+            $employee1=employee::where('id',$employee->id)->pluck('image')->first();
+            $employee->delete();
+            if(file_exists(public_path('image/'.$employee1))){
+                unlink(public_path('image/'.$employee1));
+            }
+            return back()->with('success','employee Deleted Successfully!');
+        } catch (\Exception $ex) {
+            return back()->with('error','employee Is Not Deleted!');
+        }
     }
-}
+    }
+

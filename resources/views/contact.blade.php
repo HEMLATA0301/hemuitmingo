@@ -63,24 +63,32 @@
         <!--Form To have user messages-->
         <form class="main-form" id="contact-us-form" action="{{ route('enquiry.store') }}" method="POST">
           @csrf
+
+          
           <div class="col-12">
             <div class="row g-3 mb-1">
               <div class="col-lg-6 col-12" data-aos="fade-right" data-aos-delay="200">
-                <input placeholder="name" type="text" id="name" name="name" required class="text-input" required>
+                <label for="name"></label>
+                <input placeholder="name" type="text" id="name" name="name" required class="text-input" oninput="validatename(this)" required>
               </div>
               <div class="col-lg-6 col-12" data-aos="fade-left" data-aos-delay="200">
-                <input placeholder="subject" type="text" id="subject" name="subject" required class="text-input" required>
+              <label for="subject"></label>
+              <input placeholder="subject" type="text" id="subject" name="subject" required class="text-input" oninput="validatesubject(this)" required>
               </div>
             </div>
           </div>
           <div class="col-12" data-aos="fade-up" data-aos-delay="250">
-            <input placeholder="email" type="email" id="email" name="email" required class="text-input my-2" required>
+            <label for="email"></label>
+            <input placeholder="email" type="email" id="email" name="email" required class="text-input my-2"  required oninput="validateemail(this)">
           </div>
           <div class="col-12" data-aos="fade-up" data-aos-delay="300">
             <textarea placeholder="message" class="text-input my-2" rows="7" cols="30" id="message" name="message"
               required></textarea>
           </div>
+
+          
           <input type="hidden" name="ip" value="{{ request()->ip() }}">
+          {!! htmlFormSnippet() !!}
           <div class="col-12" data-aos="fade-up" data-aos-delay="350">
             <button type="submit" value="Submit" class="btn">send now</button>
           </div>
