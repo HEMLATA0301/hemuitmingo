@@ -37,6 +37,11 @@ class WebController extends Controller
     public function privacy(){
         return view('privacy');
     }
+
+    public function refund(){
+        return view('refund');
+    }
+
     public function product(){
         $products=Product::select('title','short_description','image')
             ->orderBy('priority')->where('status',0)->get();

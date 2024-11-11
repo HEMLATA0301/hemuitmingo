@@ -150,6 +150,7 @@
             <div>
               <a href="{{route('termus')}}">Terms of Use </a>
               | <a href="{{route('privacy')}}">Privacy Policy</a>
+              | <a href="{{route('refund')}}">Refund &amp; Cancellation Policy</a>
             </div>
           </div>
         </div>
